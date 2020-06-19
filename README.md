@@ -7,7 +7,16 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 - MATLAB 2018 b
 
 ### Dataset
-- ex5data1.mat
+- ex6data1.mat
+- ex6data2.mat
+- ex6data3.mat
+- spamTrain.mat
+- spamTest.mat
+- emailSample1.txt
+- emailSample2.txt
+- spamSample1.txt
+- spamSample2.txt
+- vocab.txt
 
 ### Files included in this repo
 - ex6.m - Octave/MATLAB script for the first half of the exercise 
