@@ -51,8 +51,17 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 
 [⋆] emailFeatures.m - Feature extraction from emails
 
-## Support Vector Machines
+## Part 1: Support Vector Machines
+We will be using support vector machines (SVMs) with various example 2D datasets. Experimenting with these datasets will help us gain an intuition of how SVMs work and how to use a Gaussian kernel with SVMs.
 
+### Part 1.1: Example Dataset 1
+In this dataset, the positions of the positive examples (indicated with +) and the negative examples (indicated with o) suggest a natural separation indicated by the gap.
+```
+ex6data1.mat
+```
+
+![dataset1](Figure/dataset1.jpg)
+- Figure: Example Dataset 1: SVM decision boundary
 
 
 ## Course Links 
