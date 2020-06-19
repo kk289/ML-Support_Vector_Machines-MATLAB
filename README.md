@@ -68,8 +68,15 @@ We will try using different values of the C parameter with SVMs. Informally, the
 ![dataset1](Figure/example1db.jpg)
 - Figure: SVM decision boundary with C = 1 (Dataset 1)
 
+When C = 1, we find that the SVM puts the decision boundary in the gap between the two datasets and misclassifies the data point on the far left.
+
+
 ![dataset1](Figure/example2db.jpg)
 - Figure: SVM decision boundary with C = 100 (Dataset 1)
+
+When C = 100, we find that the SVM now classifies every single example correctly, but has a decision boundary that does not appear to be a natural fit for the data.
+
+
 
 ## Course Links 
 
