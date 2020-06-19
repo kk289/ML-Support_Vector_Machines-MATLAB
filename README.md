@@ -51,6 +51,9 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 
 [⋆] emailFeatures.m - Feature extraction from emails
 
+## Support Vector Machines
+
+
 
 ## Course Links 
 
