@@ -34,7 +34,7 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 
 [⋆] dataset3Params.m - Parameters to use for Dataset 3
 
-- ex6 spam.m - Octave/MATLAB script for the second half of the exer- cise
+- ex6_spam.m - Octave/MATLAB script for the second half of the exercise
 - spamTrain.mat - Spam training set
 - spamTest.mat - Spam test set
 - emailSample1.txt - Sample email 1
@@ -63,6 +63,13 @@ ex6data1.mat
 ![dataset1](Figure/dataset1.jpg)
 - Figure: Example Dataset 1: SVM decision boundary
 
+We will try using different values of the C parameter with SVMs. Informally, the C parameter is a positive value that controls the penalty for misclassified training examples. A large C parameter tells the SVM to try to classify all the examples correctly. C plays a role similar to 1/λ, where λ is the regularization parameter that we were using previously for logistic regression.
+
+![dataset1](Figure/example1db.jpg)
+- Figure: SVM decision boundary with C = 1 (Dataset 1)
+
+![dataset1](Figure/example2db.jpg)
+- Figure: SVM decision boundary with C = 100 (Dataset 1)
 
 ## Course Links 
 
