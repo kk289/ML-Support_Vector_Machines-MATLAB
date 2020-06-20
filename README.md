@@ -99,6 +99,16 @@ Result:
 Gaussian Kernel between (x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 2.000000)-> *0.324652*
 
 
+#### Part 1.2.2: Example Dataset 2
+We will load and plot dataset 2.
+```
+ex6data2.mat
+```
+
+![dataset2](Figure/dataset2.jpg)  
+- Figure: Example Dataset 2: No linear decision boundary
+
+
 
 
 ## Course Links 
