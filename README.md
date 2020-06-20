@@ -169,9 +169,31 @@ Found Best value [C, sigma] = [1.000000 0.100000] with prediction error = 0.1850
 
 
 ## Part 2: Spam Classification
-Many email services today provide spam filters that are able to classify emails into spam and non-spam email with high accuracy. In this part, we will use SVMs to build your own spam filter.
+Many email services today provide spam filters that are able to classify emails into spam and non-spam email with high accuracy. In this part, we will use SVMs to build our own spam filter.
 
 You will be training a classifier to classify whether a given email, x, is spam (y = 1) or non-spam (y = 0). In particular, you need to convert each email into a feature vector x ∈ R^n.
+
+we will run following script for this part:
+```
+ex6_spam.m
+```
+
+### Part 2.1: Preprocessing Emails
+
+To know background about how to classify and implement spam email, go read section 2.1 of *ex6.pdf*.
+
+To use an SVM to classify emails into Spam v.s. Non-Spam, we first need to convert each email into a vector of features. In this part, we will implement the preprocessing steps for each email. we complete the code in processEmail.m to produce a word indices vector for a given email.
+
+##### processEmail.m
+```
+% Look up the word in the dictionary and add to word_indices if found
+
+idx = strmatch(str, vocabList, 'exact');
+
+if ~isempty(idx)
+  word_indices = [word_indices; idx];
+end
+```
 
 
 ## Course Links 
