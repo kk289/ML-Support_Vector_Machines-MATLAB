@@ -139,19 +139,19 @@ error_min = inf;
 values = [0.01 0.03 0.1 0.3 1 3 10 30];
 
 for C = values
-
     for sigma = values
         fprintf('Train and evaluate (on cross validation set) for\n[C, sigma] = [%f %f]\n',C,sigma);
+        predictions = 0;
         model = svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
-        pred_error = mean(double(svmPredict(model, Xval) ~= yval));
+        predictions = svmPredict(model, Xval);
+        pred_error = mean(double(predictions ~= yval));
         fprintf('prediction error: %f\n', pred_error);
         
         if( pred_error <= error_min )
             fprintf('error_min updated!\n');
             error_min = pred_error;
             fprintf('[C, sigma] = [%f %f]\n', C, sigma);
-        end
-        
+        end        
         fprintf('\n');
     end
 end
