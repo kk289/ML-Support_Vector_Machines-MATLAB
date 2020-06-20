@@ -125,7 +125,7 @@ ex6data3.mat
 ![dataset3](Figure/dataset3.jpg)  
 - Figure: Example Dataset 3
 
-In dataset3, variable X, y, Xval, yval are given. The provided code in ex6.m trains the SVM classifier using the training set (X, y) using parameters loaded from dataset3Params.m.
+In dataset3, variables X, y, Xval, yval are given. The provided code in ex6.m trains the SVM classifier using the training set (X, y) using parameters loaded from dataset3Params.m.
 
 We are going to set cross validation set Xval, yval to determine the best *C* and σ parameter to use. 
 
