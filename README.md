@@ -108,7 +108,14 @@ ex6data2.mat
 ![dataset2](Figure/dataset2.jpg)  
 - Figure: Example Dataset 2: No linear decision boundary
 
+From figure, we can obserse that there is no linear decision boundary that separates the positive and negative examples for this dataset. However, by using the Gaussian kernel with the SVM, we will be able to learn a non-linear decision boundary that can perform reasonably well for the dataset.
 
+We already implemented gaussian kernal function above, let's proceed to train the SVM with the gaussian kernal function on this dataset.
+
+![db2](Figure/db2.jpg)
+- Figure: SVM (Gaussian Kernal) Decision Boundary (Example dataset 2)
+
+Figure shows the decision boundary found by the SVM with a Gaussian kernel. The decision boundary is able to separate most of the positive and negative examples correctly and follows the contours of the dataset well.
 
 
 ## Course Links 
