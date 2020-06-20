@@ -83,7 +83,8 @@ To find non-linear decision boundaries with the SVM, we need to first implement 
 
 The Gaussian kernel as a similarity function that measures the “distance” between a pair of examples, (x(i),x(j)). The Gaussian kernel is also parameterized by a bandwidth parameter, σ, which determines how fast the similarity metric decreases (to 0) as the examples are further apart.
 
-The Gaussian Kernal function: 
+The Gaussian Kernal function:
+
 ![gaussian](Figure/gaussian.png)
 
 ##### gaussianKernel.m
