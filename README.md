@@ -117,6 +117,16 @@ We already implemented gaussian kernal function above, let's proceed to train th
 
 Figure shows the decision boundary found by the SVM with a Gaussian kernel. The decision boundary is able to separate most of the positive and negative examples correctly and follows the contours of the dataset well.
 
+#### Part 1.2.3: Example Dataset 3
+We will load and plot dataset 3.
+```
+ex6data3.mat
+```
+![dataset3](Figure/dataset3.jpg)  
+- Figure: Example Dataset 3
+
+
+
 
 ## Course Links 
 
