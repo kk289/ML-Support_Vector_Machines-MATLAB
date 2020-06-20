@@ -70,11 +70,20 @@ We will try using different values of the C parameter with SVMs. Informally, the
 
 When C = 1, we find that the SVM puts the decision boundary in the gap between the two datasets and misclassifies the data point on the far left.
 
-
 ![dataset1](Figure/example2db.jpg)
 - Figure: SVM decision boundary with C = 100 (Dataset 1)
 
 When C = 100, we find that the SVM now classifies every single example correctly, but has a decision boundary that does not appear to be a natural fit for the data.
+
+### Part 1.2: SVM with Gaussian Kernels
+We will be using SVMs to do non-linear classification. In particular, we will be using SVMs with Gaussian kernels on datasets that are not linearly separable.
+
+#### Part 1.2.1: Gaussian kernel
+To find non-linear decision boundaries with the SVM, we need to first im- plement a Gaussian kernel.
+
+The Gaussian kernel as a similarity function that measures the “distance” between a pair of examples, (x(i),x(j)). The Gaussian kernel is also parameterized by a bandwidth parameter, σ, which determines how fast the similarity metric decreases (to 0) as the examples are further apart.
+
+
 
 
 
