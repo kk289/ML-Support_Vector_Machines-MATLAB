@@ -1,4 +1,4 @@
-# Machine Learning (MATLAB) - Support_Vector_Machines
+# Machine Learning (MATLAB) - Support Vector Machines
 
 Machine Learning course from Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/home/week/7).
 
