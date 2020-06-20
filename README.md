@@ -168,6 +168,11 @@ Found Best value [C, sigma] = [1.000000 0.100000] with prediction error = 0.1850
 - Figure: SVM (Gaussian Kernal) Decision Boundary (Example Dataset 3)
 
 
+## Part 2: Spam Classification
+Many email services today provide spam filters that are able to classify emails into spam and non-spam email with high accuracy. In this part, we will use SVMs to build your own spam filter.
+
+You will be training a classifier to classify whether a given email, x, is spam (y = 1) or non-spam (y = 0). In particular, you need to convert each email into a feature vector x ∈ R^n.
+
 
 ## Course Links 
 
