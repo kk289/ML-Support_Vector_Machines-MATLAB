@@ -4,7 +4,8 @@ function sim = gaussianKernel(x1, x2, sigma)
 %   and returns the value in sim
 
 % Ensure that x1 and x2 are column vectors
-x1 = x1(:); x2 = x2(:);
+x1 = x1(:);
+x2 = x2(:);
 
 % You need to return the following variables correctly.
 sim = 0;
@@ -13,14 +14,9 @@ sim = 0;
 % Instructions: Fill in this function to return the similarity between x1
 %               and x2 computed using a Gaussian kernel with bandwidth
 %               sigma
-%
-%
 
+diff = sum((x1 - x2).^2);
+temp = 2 * (sigma.^2);
+sim = exp(-(diff/temp));
 
-
-
-
-
-% =============================================================
-    
 end
