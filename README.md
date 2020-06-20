@@ -125,6 +125,45 @@ ex6data3.mat
 ![dataset3](Figure/dataset3.jpg)  
 - Figure: Example Dataset 3
 
+In dataset3, variable X, y, Xval, yval are given. The provided code in ex6.m trains the SVM classifier using the training set (X, y) using parameters loaded from dataset3Params.m.
+
+We are going to set cross validation set Xval, yval to determine the best *C* and σ parameter to use. 
+
+For both C and σ, we try values in multiplicative steps (e.g.,0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30). We try all possible pairs of values for C and σ (e.g., C = 0.3, and σ = 0.1). We would end up training and evaluating (on the CV set) a total of 8^2 = 64 different models.
+
+##### dataset3Params.m  
+```
+% Parameters to use for Dataset 3
+fprintf('suggests best [C, sigma] values\n');
+error_min = inf;
+values = [0.01 0.03 0.1 0.3 1 3 10 30];
+
+for C = values
+
+    for sigma = values
+        fprintf('Train and evaluate (on cross validation set) for\n[C, sigma] = [%f %f]\n',C,sigma);
+        model = svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
+        pred_error = mean(double(svmPredict(model, Xval) ~= yval));
+        fprintf('prediction error: %f\n', pred_error);
+        
+        if( pred_error <= error_min )
+            fprintf('error_min updated!\n');
+            error_min = pred_error;
+            fprintf('[C, sigma] = [%f %f]\n', C, sigma);
+        end
+        
+        fprintf('\n');
+    end
+end
+
+fprintf('\nFound Best value [C, sigma] = [%f %f] with prediction error = %f\n', C, sigma, error_min);
+```
+
+Result: 
+Found Best value [C, sigma] = [30.000000 30.000000] with prediction error = 0.030000
+
+![db3](Figure/db3.jpg)
+- Figure: SVM (Gaussian Kernal) Decision Boundary (Example Dataset 3)
 
 
 
