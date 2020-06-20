@@ -23,27 +23,27 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 
 fprintf('suggests best [C, sigma] values\n');
-error_min = inf;
+dim_result = eye(64,3);
+error_min = 0;
 values = [0.01 0.03 0.1 0.3 1 3 10 30];
 
-for C = values
-    for sigma = values
-        fprintf('Train and evaluate (on cross validation set) for\n[C, sigma] = [%f %f]\n',C,sigma);
-        predictions = 0;
-        model = svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
+for C_val = values
+    for sigma_val = values
+        
+        fprintf('Train and evaluate (on cross validation set) for\n[C_val, sigma_val] = [%f %f]\n',C_val,sigma_val);
+        error_min = error_min + 1;
+        model = svmTrain(X, y, C_val, @(x1, x2) gaussianKernel(x1, x2, sigma_val));
         predictions = svmPredict(model, Xval);
         pred_error = mean(double(predictions ~= yval));
         fprintf('prediction error: %f\n', pred_error);
         
-        if( pred_error <= error_min )
-            fprintf('error_min updated!\n');
-            error_min = pred_error;
-            fprintf('[C, sigma] = [%f %f]\n', C, sigma);
-        end        
-        fprintf('\n');
+        dim_result(error_min,:) = [C_val, sigma_val, pred_error];
     end
 end
 
-fprintf('\nFound Best value [C, sigma] = [%f %f] with prediction error = %f\n', C, sigma, error_min);
+result_sort = sortrows(dim_result, 3);
+C = result_sort(1,1);
+sigma = result_sort(1,2);
 
+fprintf('\nFound Best value [C, sigma] = [%f %f] with prediction error = %f\n', C, sigma, pred_error);
 end
