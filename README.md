@@ -127,7 +127,7 @@ ex6data3.mat
 
 In dataset3, variables X, y, Xval, yval are given. The provided code in ex6.m trains the SVM classifier using the training set (X, y) using parameters loaded from dataset3Params.m.
 
-We are going to set cross validation set Xval, yval to determine the best *C* and σ parameter to use. 
+We are going to use cross validation set Xval, yval to determine the best *C* and σ parameter to use. 
 
 For both C and σ, we try values in multiplicative steps (e.g.,0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30). We try all possible pairs of values for C and σ (e.g., C = 0.3, and σ = 0.1). We would end up training and evaluating (on the CV set) a total of 8^2 = 64 different models.
 
