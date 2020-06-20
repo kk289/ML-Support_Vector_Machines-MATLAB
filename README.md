@@ -79,10 +79,23 @@ When C = 100, we find that the SVM now classifies every single example correctly
 We will be using SVMs to do non-linear classification. In particular, we will be using SVMs with Gaussian kernels on datasets that are not linearly separable.
 
 #### Part 1.2.1: Gaussian kernel
-To find non-linear decision boundaries with the SVM, we need to first im- plement a Gaussian kernel.
+To find non-linear decision boundaries with the SVM, we need to first implement a Gaussian kernel.
 
 The Gaussian kernel as a similarity function that measures the “distance” between a pair of examples, (x(i),x(j)). The Gaussian kernel is also parameterized by a bandwidth parameter, σ, which determines how fast the similarity metric decreases (to 0) as the examples are further apart.
 
+The Gaussian Kernal function: 
+![gaussian](Figure/gaussian.png)
+
+##### gaussianKernel.m
+```
+% Gaussian kernel for SVM
+diff = sum((x1 - x2).^2);
+temp = 2 * (sigma.^2);
+sim = exp(-(diff/temp));
+```
+
+Result: 
+Gaussian Kernel between (x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 2.000000)-> *0.324652*
 
 
 
