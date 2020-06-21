@@ -195,7 +195,45 @@ if ~isempty(idx)
 end
 ```
 
+### Part 2.2: Extracting Features from Emails
+You will now implement the feature extraction that converts each email into a vector in R^n. We will be using n = # words in vocabulary list. Specifically, the feature xi ∈ {0, 1} for an email corresponds to whether the i-th word in the dictionary occurs in the email. That is, xi = 1 if the i-th word is in the email and xi = 0 if the i-th word is not present in the email.
 
+##### emailFeatures.m
+```
+% Feature extraction from emails
+for i = 1:size(word_indices)
+    x(word_indices(i)) = 1;
+end
+```
+Result: the feature vector had length 1899 and 45 non-zero entries.
+
+### Part 2.3: Training SVM for Spam Classification
+Since we already implemented processEmail.m and emailFeatures.m functions, we will load a preprocessed training dataset that will be used to train a SVM classifier. 
+
+*spamTrain.mat* contains 4000 training examples of spam and non-spam email, while *spamTest.mat* contains 1000 test examples. 
+
+After loading dataset, ex6_spam.m will proceed to train a SVM to classify between spam (y = 1) and non-spam (y = 0) emails. 
+We should see that the classifier gets a training accuracy of about 99.8% and a test accuracy of about 98.5%.
+
+#### Part 2.4: Top Predictors for Spam
+To better understand how the spam classifier works, we can inspect the parameters to see which words the classifier thinks are the most predictive of spam.
+
+The next step of ex6 spam.m finds the parameters with the largest positive values in the classifier and displays the corresponding words. Thus, if an email contains words such as “guarantee”, “remove”, “dollar”, and “price”, it is likely to be classified as spam.
+
+### Try our own emails
+Now that we've trained the spam classifier, we can use it on your own emails! In the starter code, we have included spamSample1.txt, spamSample2.txt, emailSample1.txt and emailSample2.txt as examples. The following code reads in one of these emails and then uses your learned SVM classifier to determine whether the email is Spam or Not Spam.
+
+- Downloaded file from [SpamAssassin Public Corpus](http://spamassassin.apache.org/old/publiccorpus/20030228_spam.tar.bz2)  
+- Try out one text file at a time (Note: rename the file) 
+- Run the email through ex6_spam.m file. 
+
+Result: 
+```
+Processed own1.txt
+
+Spam Classification: 1
+(1 indicates spam, 0 indicates not spam)
+```
 ## Course Links 
 
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/home/week/7).
