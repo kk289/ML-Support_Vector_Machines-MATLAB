@@ -238,5 +238,5 @@ Spam Classification: 1
 
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/home/week/7).
 
-2) [Regularized Linear Regression](https://www.coursera.org/learn/machine-learning/home/week/6)
+2) [Support Vector Machines](https://www.coursera.org/learn/machine-learning/home/week/7)
 (Please notice that you need to log in to see the programming assignment.) #ML-Support_Vector_Machines-MATLAB
